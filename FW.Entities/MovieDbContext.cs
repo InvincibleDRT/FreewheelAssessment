@@ -34,8 +34,10 @@ namespace FW.Entities
 
             var random = new Random();
             int pk = 1;
-            var ratings = movies.Zip(users, (movie, user) =>           
-                new UserRating {Id=pk++, MovieId = movie.Id, UserId = user.Id, Rating = 5 * random.NextDouble() });
+            var ratings = (from m in movies
+                           from u in users
+                           select 
+                            new UserRating { Id = pk++, MovieId = m.Id, UserId = u.Id, Rating = random.Next(1,6) });
 
             modelBuilder.Entity<UserRating>().HasData(ratings);
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FW.Entities
 {
@@ -14,6 +15,7 @@ namespace FW.Entities
         public DateTime ReleaseDate { get; set; }
 
         public string GenreCSV { get; set; }
+        public string RunningTime { get; set; }
 
     }
 }
