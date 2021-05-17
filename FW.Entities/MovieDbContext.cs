@@ -9,6 +9,11 @@ namespace FW.Entities
 {
     public class MovieDbContext : DbContext
     {
+        public MovieDbContext(DbContextOptions options) :
+          base(options)
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,16 +33,13 @@ namespace FW.Entities
             modelBuilder.Entity<User>().HasData(users);
 
             var random = new Random();
+            int pk = 1;
             var ratings = movies.Zip(users, (movie, user) =>           
-                new UserRating { MovieId = movie.Id, UserId = user.Id, Rating = 5 * random.NextDouble() });
+                new UserRating {Id=pk++, MovieId = movie.Id, UserId = user.Id, Rating = 5 * random.NextDouble() });
 
             modelBuilder.Entity<UserRating>().HasData(ratings);
 
             base.OnModelCreating(modelBuilder);
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            options.UseSqlite("Data Source=movies.db");
         }
 
         public DbSet<Movie> Movies { get; set; }
