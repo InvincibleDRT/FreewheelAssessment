@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreewheelAssessment", "FreewheelAssessment\FreewheelAssessment.csproj", "{D06D2386-CC2D-4747-A464-5670DF9AD4CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FW.Entities", "FW.Entities\FW.Entities.csproj", "{6E3B1BF6-26B9-4A64-B6F3-9EF7A305D86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D06D2386-CC2D-4747-A464-5670DF9AD4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06D2386-CC2D-4747-A464-5670DF9AD4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06D2386-CC2D-4747-A464-5670DF9AD4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06D2386-CC2D-4747-A464-5670DF9AD4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3B1BF6-26B9-4A64-B6F3-9EF7A305D86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3B1BF6-26B9-4A64-B6F3-9EF7A305D86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3B1BF6-26B9-4A64-B6F3-9EF7A305D86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3B1BF6-26B9-4A64-B6F3-9EF7A305D86D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {438ACD2E-9D6B-494D-8D66-221B005F177D}
+	EndGlobalSection
+EndGlobal
