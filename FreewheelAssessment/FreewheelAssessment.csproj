@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FW.Entities\FW.Entities.csproj" />
+    <ProjectReference Include="..\FW.Services\FW.Services.csproj" />
   </ItemGroup>
 
 </Project>

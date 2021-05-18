@@ -1,4 +1,5 @@
 using FW.Entities;
+using FW.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +38,8 @@ namespace FreewheelAssessment
 
             services.AddDbContextPool<MovieDbContext>(
                 options => options.UseSqlite($"Data Source=movies.db"));
+
+            services.AddScoped<IMovieService, MovieService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
